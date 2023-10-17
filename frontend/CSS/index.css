@@ -1,12 +1,24 @@
+:root{
+    --windows-color:#66C0F4;
+    --sony-color: #182580;
+    --xbox-color: #107C10;
+    --nintendo-color:#E60012;
+    --backgroung-color: rgb(10, 10, 10);
+    
+}
+
 body{
-    background-color: black;
+    background-color: var(--backgroung-color);
+}
+.container{
+    height: 95vh;
 }
 h1{
     color: white;
-    margin-left: 30vw;
-    margin-right: 30vw;
-    width: 40vw;
+    margin-left: 0;
+    margin-right: 0;
     font-size: 2rem;
+    text-align: center;
 }
 .links{
     margin-left: 35vw;
@@ -20,16 +32,16 @@ h1{
     margin-bottom: 2vh;
 }
 #windows{
-    background-color: #66C0F4;
+    background-color: var(--windows-color);
 }
 #sony{
-    background-color: #182580;
+    background-color: var(--sony-color);
 }
 #xbox{
-    background-color: #107C10;
+    background-color: var(--xbox-color);
 }
 #nintendo{
-    background-color: #E60012;
+    background-color: var(--nintendo-color);
 }
 img{
     width: 80%;
@@ -38,9 +50,6 @@ img{
 
 @media(min-width: 570px){
     h1{
-        margin-left: 30vw;
-        margin-right: 30vw;
-        width: 40vw;
         font-size: 2.5rem;
     }
     .links{
@@ -57,12 +66,6 @@ img{
 }
 
 @media(min-width: 768px){
-    h1{
-        margin-left: 40vw;
-        margin-right: 40vw;
-        width: 20vw;
-        font-size: 2.5rem;
-    }
     .links{
         margin-left: 42vw;
         margin-right: 42vw;
@@ -79,9 +82,6 @@ img{
 
 @media(min-width: 928px){
     h1{
-        margin-left: 35vw;
-        margin-right: 35vw;
-        width: 30vw;
         font-size: 3.2rem;
     }
     .links{
