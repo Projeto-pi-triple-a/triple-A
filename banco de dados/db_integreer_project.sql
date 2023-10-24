@@ -51,6 +51,10 @@ lastEvent date,
 nextevent date
 );
 
+insert into microsoft values(null,1,"1 teste de jogo para a requisição 1","descrição para jogo da requisição",199.99,'2023-05-15'),
+                            (null,1,"2 teste de jogo para a requisição 2","descrição para jogo da requisição",199.99,'2023-05-15'),
+                            (null,1,"3 teste de jogo para a requisição 3","descrição para jogo da requisição",199.99,'2023-05-15');
+
 insert into microsoft values
  (1,1,"Postal: Brain Damaged",": POSTAL: Brain Damaged é uma nova versão orientada para a ação da série de jogos cult Running With Scissors com gráficos de retrocesso e jogabilidade moderna e em ritmo acelerado. Faça um passeio de montanha-russa selvagem pelo país das maravilhas retorcido envolto na mente confusa do POSTAL DUDE",null),
  (2,2,"The Quarry",": The Quarry é um futuro jogo eletrônico de drama interativo desenvolvido pela Supermassive Games e publicado pela 2K Games. É considerado um sucessor espiritual de Until Dawn e está previsto para ser lançado para Microsoft Windows",269),

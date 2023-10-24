@@ -1,4 +1,4 @@
-/*const mysql = require('mysql2')
+const mysql = require('mysql2')
 const connection = mysql.createConnection({
  host : process.env.HOST,
  user : process.env.USER,
@@ -6,4 +6,4 @@ const connection = mysql.createConnection({
  database : process.env.DATABASE
 })
 
-module.exports = connection*/
+module.exports = connection
