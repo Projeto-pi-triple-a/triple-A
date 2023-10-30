@@ -1,17 +1,23 @@
 const connection = require("./connection");
 
-const getAllGamesFromCompany = async () => {
+const getAllGamesFromCompany = async (companyName) => {
     try {
-        console.log("cheguei no trycath da model");
-        const [rows] = await connection.execute("SELECT * FROM microsoft");
-        console.log("resultado da query no BD", rows);
-        return rows;
+        const query = `SELECT * from ${companyName};`
+        const [games] = await connection.execute(query);
+        return games
     } catch (error) {
         console.log("erro ao fazer a consulta", error);
-        throw error; // Rejeite o erro para que ele seja capturado no controlador
+        throw error
     }
 }
-
+const insertGame = async() =>
+{
+ try {
+    const query = `INSERT INTO `
+ } catch (error) {
+    console.log(`erro ao inserir jogo ${error}`)
+ }
+}
 module.exports = {
     getAllGamesFromCompany
 }
