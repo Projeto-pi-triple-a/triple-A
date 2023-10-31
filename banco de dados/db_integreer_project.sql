@@ -3,7 +3,6 @@ use db_Itegreer_project;
 
 create table microsoft(
 id_game_microsoft int not null primary key auto_increment,
-id_company_microsoft int not null,
 game_name varchar(80) not null,
 Description_game varchar(4000),
 link_video varchar(200),
@@ -12,7 +11,6 @@ ofical_date date null
 );
 create table sony(
 id_game_sony int not null primary key auto_increment,
-id_company_sony int not null,
 game_name varchar(80) not null,
 Description_game varchar(4000),
 link_video varchar(200),
@@ -21,7 +19,6 @@ ofical_date date  null
 );
 create table nintendo(
 id_game_nintendo int not null primary key auto_increment,
-id_company_nintendo int not null,
 game_name varchar(80) not null,
 Description_game varchar(4000),
 link_video varchar(200),
@@ -30,7 +27,6 @@ ofical_date date  null
 );
 create table pc(
 id_game_pc int not null primary key auto_increment,
-id_company_pc int not null,
 game_name varchar(80) not null,
 Description_game varchar(4000),
 link_video varchar(200),
@@ -56,9 +52,9 @@ lastEvent date,
 nextevent date
 );
 
-insert into microsoft values(null,1,"1 teste de jogo para a requisição 1","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15'),
-                            (null,1,"2 teste de jogo para a requisição 2","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15'),
-                            (null,1,"3 teste de jogo para a requisição 3","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15');
+insert into microsoft values(null,"1 teste de jogo para a requisição 1","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15'),
+                            (null,"2 teste de jogo para a requisição 2","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15'),
+                            (null,"3 teste de jogo para a requisição 3","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15');
 
 insert into microsoft values
  (1,1,"Postal: Brain Damaged",": POSTAL: Brain Damaged é uma nova versão orientada para a ação da série de jogos cult Running With Scissors com gráficos de retrocesso e jogabilidade moderna e em ritmo acelerado. Faça um passeio de montanha-russa selvagem pelo país das maravilhas retorcido envolto na mente confusa do POSTAL DUDE",null),
