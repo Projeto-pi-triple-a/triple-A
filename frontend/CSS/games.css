@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(36, 33, 33);
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+p, h1, h2, h3{
+    color: white;
+}
+#exclusiveGamesTitle{
+    text-align: center;
+}
+.cardGames{
+    width: 35vw;
+    border: 0.2vw;
+    border-style: solid;
+    border-color: white;
+    
+}
+#logo{
+width: 40vw;
+height: 40vw;
+margin-left: 20vw;
+margin-right: 20vw;
+background-color: #107C10;
+border-radius: 100px;
+}
+#logoImage{
+    width: 80%;
+    margin: 10%;
+}
+.gameplay{
+    width: 100%;
+}
+
+@media(min-width: 928px){
+
+    #logo{
+        width: 10vw;
+        height: 10vw;
+        margin-left: 35vw;
+        margin-right: 35vw;
+        background-color: #107C10;
+        border-radius: 100px;
+        }
+        #logoImage{
+            width: 80%;
+            margin: 10%;
+        }
+
+        .cardGames{
+            width: 15vw;
+            border: 0.2vw;
+            border-style: solid;
+            border-color: white;
+            
+        }
+
+
+}
