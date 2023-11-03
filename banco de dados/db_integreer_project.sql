@@ -1,6 +1,12 @@
 create database db_Itegreer_project;
 use db_Itegreer_project;
 
+create table login(
+id int not null auto_increment primary key,
+nome varchar(200) not null,
+email varchar(200) not null,
+senha varchar(200) not null
+);
 create table microsoft(
 id_game_microsoft int not null primary key auto_increment,
 game_name varchar(80) not null,
@@ -55,6 +61,8 @@ nextevent date
 insert into microsoft values(null,"1 teste de jogo para a requisição 1","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15'),
                             (null,"2 teste de jogo para a requisição 2","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15'),
                             (null,"3 teste de jogo para a requisição 3","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15');
+insert into login values (null,'lucas pedroso','pedrosolucas1745@gmail.com','senha1234');
+insert into data_eventos values (null,1,'2023-02-20','2023-05-15');
 
 insert into microsoft values
  (1,1,"Postal: Brain Damaged",": POSTAL: Brain Damaged é uma nova versão orientada para a ação da série de jogos cult Running With Scissors com gráficos de retrocesso e jogabilidade moderna e em ritmo acelerado. Faça um passeio de montanha-russa selvagem pelo país das maravilhas retorcido envolto na mente confusa do POSTAL DUDE",null),
@@ -71,7 +79,7 @@ insert into Game_not_exclusive values (null,"Postal: Brain Damaged"," Brain Dama
 									  (null,"Sonic Origins",":Tenha uma nova experiência das aventuras clássicas de Sonic The Hedgehog, Sonic The Hedgehog 2, Sonic 3 & Knuckles e Sonic CD no Sonic Origins remasterizado! Da emblemática Zona Green Hill ao traiçoeiro Robô Death Egg, você vai percorrer uma infinidade de momentos memoráveis na sua missão para frustrar os planos do Dr. Robotnik em alta definição! Esta versão atualizada contém áreas inéditas, animações adicionais e um novo Modo Aniversário!",225,"2022-06-22",5,5,5,5);
 
 
-insert into data_eventos values (null,1,'2023-02-20','2023-05-15');
+
 drop database db_itegreer_project;						
 
 
