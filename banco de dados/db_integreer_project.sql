@@ -9,53 +9,53 @@ senha varchar(200) not null
 );
 create table microsoft(
 id int not null primary key auto_increment,
-game_name varchar(80) not null,
-Description_game varchar(4000),
-link_video varchar(200),
-oficial_price double null,
-ofical_date date null
+gameName varchar(80) not null,
+descriptionGame varchar(4000),
+linkVideo varchar(200),
+oficialPrice double null,
+oficalDate date null
 );
 create table sony(
 id int not null primary key auto_increment,
-game_name varchar(80) not null,
-Description_game varchar(4000),
-link_video varchar(200),
-oficial_price double  null,
-ofical_date date  null
+gameName varchar(80) not null,
+descriptionGame varchar(4000),
+linkVideo varchar(200),
+oficialPrice double null,
+oficalDate date null
 );
 create table nintendo(
 id int not null primary key auto_increment,
-game_name varchar(80) not null,
-Description_game varchar(4000),
-link_video varchar(200),
-oficial_price double  null,
-ofical_date date  null
+gameName varchar(80) not null,
+descriptionGame varchar(4000),
+linkVideo varchar(200),
+oficialPrice double null,
+oficalDate date null
 );
 create table pc(
 id int not null primary key auto_increment,
-game_name varchar(80) not null,
-Description_game varchar(4000),
-link_video varchar(200),
-oficial_price double null,
-ofical_date date null
+gameName varchar(80) not null,
+descriptionGame varchar(4000),
+linkVideo varchar(200),
+oficialPrice double null,
+oficalDate date null
 );
 create table game_not_exclusive(
-id int not null auto_increment primary key,
-game_name varchar(80) not null,
-Description_game varchar(4000),
-link_video varchar(200),
-oficial_price double  null,
-ofical_date date  null,
-plataform_microsoft boolean not null,
-plataform_sony boolean not null,
-plataform_nintendo boolean not null,
-plataform_pc boolean not null
+id int not null primary key auto_increment,
+gameName varchar(80) not null,
+descriptionGame varchar(4000),
+linkVideo varchar(200),
+oficialPrice double null,
+oficalDate date null,
+plataformMicrosoft boolean not null,
+plataformSony boolean not null,
+plataformNintendo boolean not null,
+plataformPc boolean not null
 );
 create table data_eventos(
-id_data int not null auto_increment primary key,
-id_empresa int not null,
+id int not null auto_increment primary key,
+idCompany int not null,
 lastEvent date,
-nextevent date
+nextEvent date
 );
 
 insert into microsoft values(null,"1 teste de jogo para a requisição 1","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15'),
