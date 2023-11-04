@@ -40,7 +40,7 @@ oficialPrice double null,
 oficialDate date null
 );
 create table game_not_exclusive(
-id int not null primary key auto_increment,
+idGameNE int not null primary key auto_increment,
 gameName varchar(80) not null,
 descriptionGame varchar(4000),
 linkVideo varchar(200),
@@ -61,6 +61,19 @@ nextEvent date
 insert into microsoft values(null,"1 teste de jogo para a requisição 1","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15'),
                             (null,"2 teste de jogo para a requisição 2","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15'),
                             (null,"3 teste de jogo para a requisição 3","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15');
+INSERT INTO game_not_exclusive VALUES
+(null,'Jogo 1', 'Descrição do Jogo 1', 'https://video1.com', 49.99, '2023-10-01', false, false, true, false),
+(null,'Jogo 2', 'Descrição do Jogo 2', 'https://video2.com', 39.99, '2023-09-15', false, false, false, false),
+(null,'Jogo 3', 'Descrição do Jogo 3', 'https://video3.com', 29.99, '2023-08-20', false, false, false, false),
+(null,'Jogo 4', 'Descrição do Jogo 4', 'https://video4.com', 59.99, '2023-07-05', false, false, false, false),
+(null,'Jogo 5', 'Descrição do Jogo 5', 'https://video5.com', 19.99, '2023-06-15', false, false, false, false),
+(null,'Jogo 6', 'Descrição do Jogo 6', 'https://video6.com', 44.99, '2023-05-10', false, false, false, false),
+(null,'Jogo 7', 'Descrição do Jogo 7', 'https://video7.com', 34.99, '2023-04-02', false, false, false, false),
+(null,'Jogo 8', 'Descrição do Jogo 8', 'https://video8.com', 54.99, '2023-03-25', false, false, false, false),
+(null,'Jogo 9', 'Descrição do Jogo 9', 'https://video9.com', 24.99, '2023-02-10', false, false, false, false),
+(null,'Jogo 10', 'Descrição do Jogo 10', 'https://video10.com', 49.99, '2023-01-01', false, false, false, false),
+(null,'Jogo 11', 'Descrição do Jogo 11', 'https://video11.com', 49.99, '2023-01-01', false, false, false, false);
+
 insert into login values (null,'lucas pedroso','pedrosolucas1745@gmail.com','senha1234');
 insert into data_eventos values (null,1,'2023-02-20','2023-05-15');
 
@@ -84,6 +97,9 @@ drop database db_itegreer_project;
 
 
 
+SELECT * FROM microsoft
+UNION
+SELECT * FROM game_not_exclusive WHERE plataformMicrosoft = true;
 
 
 select * from microsoft;

@@ -1,10 +1,14 @@
 const express = require('express')
-const path = require('path');
-const gamesController = require('./controllers/gamesController')
+//const path = require('path');
+const exclusiveGamesController = require('./controllers/exclusiveGames')
+const notExclusiveGamesController = require('./controllers/notExclusiveGames')
 const router = express.Router()
-router.get('/',(request,response)=>response.status(200).sendFile(path.join(__dirname, './index.html')))
-router.get('/games/:companyName',gamesController.getAllGames)
-router.post('/games', gamesController.insertGame)
-router.delete('/games',gamesController.deleteGame)
-router.put('/games',gamesController.updateGame)
+//router.get('/',(request,response)=>response.status(200).sendFile(path.join(__dirname, './index.html')))
+router.get('/games/:companyName',exclusiveGamesController.getAllGames)
+router.post('/games', exclusiveGamesController.insertGame)
+router.delete('/games',exclusiveGamesController.deleteGame)
+router.put('/games',exclusiveGamesController.updateGame)
+router.post('/gamesNotExclusive',notExclusiveGamesController.insertGame)
+router.delete('/gamesNotExclusive',notExclusiveGamesController.deleteGame)
+router.delete('/gamesNotExclusive',notExclusiveGamesController.updateGame)
 module.exports = router

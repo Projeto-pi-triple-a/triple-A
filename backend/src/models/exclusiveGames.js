@@ -1,10 +1,17 @@
 const connection = require("./connection")
 
 const getAllGamesFromCompany = async (companyName) => {
-        const query = `SELECT * from ${companyName};`
-        const [games] = await connection.execute(query)
-        return games
-}
+    const querySelectGamesFromCompany = `SELECT * FROM ${companyName}`;
+    const querySelectGamesNotExclusiveFromCompany = `SELECT * FROM game_not_exclusive WHERE plataform${companyName} = true`;
+  
+    const [exclusiveGames] = await connection.execute(querySelectGamesFromCompany);
+    const [notExclusiveGames] = await connection.execute(querySelectGamesNotExclusiveFromCompany);
+  
+    const games = [...exclusiveGames, ...notExclusiveGames];
+  
+    return games;
+  };
+  
 const insertGame = async(game) =>
 {
     const {company} = game 
