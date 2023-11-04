@@ -14,4 +14,5 @@ router.delete('/gamesNotExclusive',notExclusiveGamesController.deleteGame)
 router.put('/gamesNotExclusive',notExclusiveGamesController.updateGame)
 router.get('/login',loginController.getLogin)
 router.post('/login',loginController.insertLogin)
+router.delete('/login/:id',loginController.deleteLogin)
 module.exports = router

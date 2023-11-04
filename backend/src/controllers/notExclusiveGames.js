@@ -11,6 +11,7 @@ const deleteGame = async (request,response) =>
   const deletedGame = await notExclusiveGamesModel.deleteGame(request.body)
   return response.status(204).json()
 }// end const deleteGame controller
+
 const updateGame = async (request,response) =>
 {
   const updateGame = await notExclusiveGamesModel.updateGame(request.body)
