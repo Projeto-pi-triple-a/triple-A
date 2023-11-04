@@ -3,6 +3,7 @@ const express = require('express')
 const router = require('./router')
 const app = express();
 const port = process.env.port
+app.use(express.json())
 app.use(router)
 app.listen(port,()=>{console.log(`server running at port ${port}`)})
 //console.log("tipo de conexão: "+process.env.host)
