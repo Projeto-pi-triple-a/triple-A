@@ -10,5 +10,5 @@ router.delete('/games',exclusiveGamesController.deleteGame)
 router.put('/games',exclusiveGamesController.updateGame)
 router.post('/gamesNotExclusive',notExclusiveGamesController.insertGame)
 router.delete('/gamesNotExclusive',notExclusiveGamesController.deleteGame)
-router.delete('/gamesNotExclusive',notExclusiveGamesController.updateGame)
+router.put('/gamesNotExclusive',notExclusiveGamesController.updateGame)
 module.exports = router

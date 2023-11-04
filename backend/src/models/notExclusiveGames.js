@@ -19,6 +19,7 @@ const insertGame = async (game) => {
  }
  const updateGame = async(game)=>
  {
+    const {id} = game
     const {gameName} = game
     const {descriptionGame} = game
     const {linkVideo} = game
@@ -29,7 +30,7 @@ const insertGame = async (game) => {
     const {plataoformNintendo} = game
     const {plataoformPc} = game
 
-    const query = `UPDATE ${company} SET gameName = '${gameName}', descriptionGame = '${descriptionGame}', linkVideo = '${linkVideo}', oficialPrice = ${oficialPrice}, oficialDate = '${oficialDate}',plataformMicrosoft = '${plataoformMicrosoft}', plataformSony = '${plataoformSony}', plataformNintendo = '${plataoformNintendo}', plataformPc = '${plataoformPc}'  WHERE idGameNE = ${id}`;
+    const query = `UPDATE game_not_exclusive SET gameName = '${gameName}', descriptionGame = '${descriptionGame}', linkVideo = '${linkVideo}', oficialPrice = ${oficialPrice}, oficialDate = '${oficialDate}',plataformMicrosoft = '${plataoformMicrosoft}', plataformSony = '${plataoformSony}', plataformNintendo = '${plataoformNintendo}', plataformPc = '${plataoformPc}'  WHERE id = ${id}`;
     const [updateGame] = await connection.execute(query)
 }
 module.exports = {
