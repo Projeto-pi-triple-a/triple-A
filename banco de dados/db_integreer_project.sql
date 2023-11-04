@@ -13,7 +13,7 @@ gameName varchar(80) not null,
 descriptionGame varchar(4000),
 linkVideo varchar(200),
 oficialPrice double null,
-oficalDate date null
+oficialDate date null
 );
 create table sony(
 id int not null primary key auto_increment,
@@ -21,7 +21,7 @@ gameName varchar(80) not null,
 descriptionGame varchar(4000),
 linkVideo varchar(200),
 oficialPrice double null,
-oficalDate date null
+oficialDate date null
 );
 create table nintendo(
 id int not null primary key auto_increment,
@@ -29,7 +29,7 @@ gameName varchar(80) not null,
 descriptionGame varchar(4000),
 linkVideo varchar(200),
 oficialPrice double null,
-oficalDate date null
+oficialDate date null
 );
 create table pc(
 id int not null primary key auto_increment,
@@ -37,7 +37,7 @@ gameName varchar(80) not null,
 descriptionGame varchar(4000),
 linkVideo varchar(200),
 oficialPrice double null,
-oficalDate date null
+oficialDate date null
 );
 create table game_not_exclusive(
 id int not null primary key auto_increment,
@@ -45,7 +45,7 @@ gameName varchar(80) not null,
 descriptionGame varchar(4000),
 linkVideo varchar(200),
 oficialPrice double null,
-oficalDate date null,
+oficialDate date null,
 plataformMicrosoft boolean not null,
 plataformSony boolean not null,
 plataformNintendo boolean not null,
