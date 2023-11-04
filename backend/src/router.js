@@ -6,4 +6,5 @@ router.get('/',(request,response)=>response.status(200).sendFile(path.join(__dir
 router.get('/games/:companyName',gamesController.getAllGames)
 router.post('/games', gamesController.insertGame)
 router.delete('/games',gamesController.deleteGame)
+router.put('/games',gamesController.updateGame)
 module.exports = router
