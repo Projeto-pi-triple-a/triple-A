@@ -11,8 +11,13 @@ const insertGame = async(request,response)=>
  return response.status(201).json(createGame)
 }// end const sendGames controller
 
+const deleteGame = async (request,response) =>{
+  const deletedGame = await gamesModel.deleteGame(request.body)
+  return response.status(204).json()
+}
 module.exports = 
 {
     getAllGames,
-    insertGame
+    insertGame,
+    deleteGame
 }

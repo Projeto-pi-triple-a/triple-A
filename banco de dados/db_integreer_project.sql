@@ -8,7 +8,7 @@ email varchar(200) not null,
 senha varchar(200) not null
 );
 create table microsoft(
-id_game_microsoft int not null primary key auto_increment,
+id int not null primary key auto_increment,
 game_name varchar(80) not null,
 Description_game varchar(4000),
 link_video varchar(200),
@@ -16,7 +16,7 @@ oficial_price double null,
 ofical_date date null
 );
 create table sony(
-id_game_sony int not null primary key auto_increment,
+id int not null primary key auto_increment,
 game_name varchar(80) not null,
 Description_game varchar(4000),
 link_video varchar(200),
@@ -24,7 +24,7 @@ oficial_price double  null,
 ofical_date date  null
 );
 create table nintendo(
-id_game_nintendo int not null primary key auto_increment,
+id int not null primary key auto_increment,
 game_name varchar(80) not null,
 Description_game varchar(4000),
 link_video varchar(200),
@@ -32,7 +32,7 @@ oficial_price double  null,
 ofical_date date  null
 );
 create table pc(
-id_game_pc int not null primary key auto_increment,
+id int not null primary key auto_increment,
 game_name varchar(80) not null,
 Description_game varchar(4000),
 link_video varchar(200),
@@ -40,7 +40,7 @@ oficial_price double null,
 ofical_date date null
 );
 create table game_not_exclusive(
-id_game int not null auto_increment primary key,
+id int not null auto_increment primary key,
 game_name varchar(80) not null,
 Description_game varchar(4000),
 link_video varchar(200),

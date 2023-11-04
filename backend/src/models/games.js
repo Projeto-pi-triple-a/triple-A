@@ -18,7 +18,16 @@ const insertGame = async(game) =>
     const [insertGame] = await connection.execute(query)
     return {insertId:insertGame.insertId}
 }
+
+ const deleteGame = async(game)=>
+ {
+    const {company} = game
+    const {id} = game
+    const query = `DELETE from ${company} WHERE id =${id};`
+    const [deleteGame] = await connection.execute(query)
+ }
 module.exports = {
     getAllGamesFromCompany,
-    insertGame
+    insertGame,
+    deleteGame
 }
