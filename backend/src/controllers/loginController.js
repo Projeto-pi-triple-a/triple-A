@@ -16,13 +16,18 @@ const insertLogin = async (request,response)=>
 const deleteLogin = async (request,response) =>
 {
     const id = request.params.id
-    console.log(id)
     const formLogin = await loginModel.deleteLogin(id)
+    return response.status(204).json()
+}
+const updateLogin = async (request,response) =>
+{
+    const formLogin = await loginModel.updateLogin(request.body)
     return response.status(204).json()
 }
 module.exports = 
 {
     getLogin,
     insertLogin,
-    deleteLogin
+    deleteLogin,
+    updateLogin
 }

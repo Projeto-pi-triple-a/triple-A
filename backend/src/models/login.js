@@ -6,7 +6,7 @@ const connection = require("./connection")
  {
     const {email} = formlogin
     const {password} = formlogin
-    const query = 'SELECT EMAIL, SENHA FROM login WHERE EMAIL = ? AND SENHA = ?; '
+    const query = 'SELECT * FROM login WHERE EMAIL = ? AND SENHA = ?; '
     const dataLogin = [email,password]
     const [login] = await connection.execute (query,dataLogin)
     if(login.length == 1)
@@ -30,14 +30,22 @@ const connection = require("./connection")
 
  const deleteLogin = async (id) =>
  {
-    console.log(id)
     const query = 'DELETE FROM LOGIN WHERE ID = ?;'
     const login = await connection.execute(query,[id])
+ }
+
+ const updateLogin = async (formLogin) =>
+ {
+    const {nome,email,password,id} = formLogin
+    const query = 'UPDATE LOGIN SET NOME = ? , EMAIL = ? , SENHA = ?  WHERE ID = ?;'
+    const dataLogin =[nome,email,password,id]
+    const [login] = await connection.execute(query,dataLogin)
  }
 
  module.exports = 
  {
     getLogin,
     insertLogin,
-    deleteLogin
+    deleteLogin,
+    updateLogin
  }
