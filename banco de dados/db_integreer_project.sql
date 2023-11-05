@@ -74,6 +74,20 @@ INSERT INTO game_not_exclusive VALUES
 (null,'Jogo 10', 'Descrição do Jogo 10', 'https://video10.com', 49.99, '2023-01-01', false, false, false, false),
 (null,'Jogo 11', 'Descrição do Jogo 11', 'https://video11.com', 49.99, '2023-01-01', false, false, false, false);
 
+-- Inserindo no mínimo 10 registros na tabela com idCompany variando de 1 a 5
+INSERT INTO data_eventos (idCompany, lastEvent, nextEvent) VALUES
+    (1, '2023-11-04', '2023-11-10'),
+    (2, '2023-11-05', '2023-11-11'),
+    (3, '2023-11-06', '2023-11-12'),
+    (4, '2023-11-07', '2023-11-13'),
+    (5, '2023-11-08', '2023-11-14'),
+    (1, '2023-11-09', '2023-11-15'),
+    (2, '2023-11-10', '2023-11-16'),
+    (3, '2023-11-11', '2023-11-17'),
+    (4, '2023-11-12', '2023-11-18'),
+    (5, '2023-11-13', '2023-11-19');
+
+
 insert into login values (null,'lucas pedroso','pedrosolucas1745@gmail.com','senha1234');
 insert into data_eventos values (null,1,'2023-02-20','2023-05-15');
 
@@ -95,7 +109,7 @@ insert into Game_not_exclusive values (null,"Postal: Brain Damaged"," Brain Dama
 
 drop database db_itegreer_project;						
 
-
+select * from data_eventos where idCompany = 1 order by id desc;
 
 SELECT * FROM microsoft
 UNION
