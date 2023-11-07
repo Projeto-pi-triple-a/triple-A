@@ -14,13 +14,22 @@ body{
 
 #windows{
     background-color: var(--windows-color);
+    margin-left: 22.2vw;
+    margin-top: 20%;
 }
 #sony{
     background-color: var(--sony-color);
+    margin-left: 22.2vw;
+    margin-top: 20%;
 }
 #xbox{
     background-color: var(--xbox-color);
+    margin-left: 22.2vw;
+    margin-top: 20%;
+
 }
 #nintendo{
     background-color: var(--nintendo-color);
+    margin-left: 22.2vw;
+    margin-top: 20%;
 }
