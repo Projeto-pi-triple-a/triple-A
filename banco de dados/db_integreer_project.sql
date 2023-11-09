@@ -58,9 +58,9 @@ lastEvent date,
 nextEvent date
 );
 
-insert into microsoft values(null,"1 teste de jogo para a requisição 1","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15'),
-                            (null,"2 teste de jogo para a requisição 2","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15'),
-                            (null,"3 teste de jogo para a requisição 3","descrição para jogo da requisição","https://www.youtube.com/watch?v=JVrZVdEnxHE",199.99,'2023-05-15');
+insert into microsoft values(null,"1 teste de jogo para a requisição 1","descrição para jogo da requisição","JVrZVdEnxHE",199.99,'2023-05-15'),
+                            (null,"2 teste de jogo para a requisição 2","descrição para jogo da requisição","JVrZVdEnxHE",199.99,'2023-05-15'),
+                            (null,"3 teste de jogo para a requisição 3","descrição para jogo da requisição","JVrZVdEnxHE",199.99,'2023-05-15');
 INSERT INTO game_not_exclusive VALUES
 (null,'Jogo 1', 'Descrição do Jogo 1', 'https://video1.com', 49.99, '2023-10-01', false, false, true, false),
 (null,'Jogo 2', 'Descrição do Jogo 2', 'https://video2.com', 39.99, '2023-09-15', false, false, false, false),

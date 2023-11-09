@@ -5,8 +5,28 @@ body{
 #exclusiveGamesTitle{
     text-align: center;
 }
+
+#microsoft, #sony, #pc, #nintendo{
+width: 40vw;
+height: 40vw;
+margin-left: 20vw;
+margin-right: 20vw;
+border-radius: 100%;
+display: flex;
+margin-top: 20%;
+}
+#logo{
+    width: 80%;
+    margin: 10%;
+}
+
+
+.containerCardGames{
+    display: block;
+}
+
 .cardGames{
-    width: 80vw;
+    width: 100%-14px;
     border: 7px;
     border-style: solid;
     border-color: white;
@@ -15,25 +35,9 @@ body{
 .cardGames:not(:first-of-type){
     margin-top: 5vh;
 }
-#windows, #sony, #xbox, #nintendo{
-width: 40vw;
-height: 40vw;
-margin-left: 20vw;
-margin-right: 20vw;
-border-radius: 100%;
-display: flex;
-}
-#logo{
-    width: 80%;
-    margin: 10%;
-}
+
 .gameplay{
     width: 100%;
-}
-
-#containerCardGames{
-    display: block;
-    margin-right: 20vw;
 }
 
 .nameGame, .price{
@@ -46,12 +50,12 @@ display: flex;
 }
 
 @media(min-width: 928px){
-
-    #windows, #sony, #xbox, #nintendo{
+    #microsoft, #sony, #pc, #nintendo{
         width: 10vw;
         height: 10vw;
         margin-left: 35vw;
         margin-right: 35vw;
+        margin-top: 3%;
         }
 
         .cardGames{
@@ -61,7 +65,7 @@ display: flex;
             margin-left: 4vw;
             margin-top: 0;
         }
-        #containerCardGames{
+        .containerCardGames{
             display: flex;
         }
 
