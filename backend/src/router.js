@@ -18,4 +18,5 @@ router.post('/login',loginController.insertLogin)
 router.delete('/login/:id',loginController.deleteLogin)
 router.put('/login',loginController.updateLogin)
 router.get('/event/:idCompany',eventDataController.getEventData)
+router.post('/event/:idCompany',eventDataController.insertEvent)
 module.exports = router
