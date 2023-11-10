@@ -4,6 +4,7 @@ body{
 }
 #exclusiveGamesTitle{
     text-align: center;
+    margin: 40px 0px;
 }
 
 #microsoft, #sony, #pc, #nintendo{
@@ -14,10 +15,25 @@ margin-right: 20vw;
 border-radius: 100%;
 display: flex;
 margin-top: 20%;
+margin-bottom: 20px;
 }
 #logo{
     width: 80%;
     margin: 10%;
+}
+
+.containerDates{
+    display: flex;
+    width: 80vw;
+    height: 40px;
+    
+}
+.dateTitle{
+    width: 60%;
+}
+
+.dates{
+    width: 40%;
 }
 
 
@@ -28,10 +44,12 @@ margin-top: 20%;
 .cardGames{
     width: 100%-14px;
     border: 7px;
+    border-bottom-width: 5px;
+    border-right-width: 5px;
     border-style: solid;
     border-color: white;
-
 }
+
 .cardGames:not(:first-of-type){
     margin-top: 5vh;
 }
@@ -44,9 +62,30 @@ margin-top: 20%;
     text-align: center;
 }
 .date, .description{
+    width: 80%;
     margin-right: 10%;
     margin-left: 10%;
 
+}
+
+.containerNE{
+    display: flex;
+    width: 100%;
+}
+.icon{
+    width: 25%;
+    border-radius: 100%;
+    display: flex;
+}
+
+@media(min-width: 768px){
+    .dateTitle{
+        width: 30%;
+    }
+    
+    .dates{
+        width: 70%;
+    }
 }
 
 @media(min-width: 928px){
@@ -68,6 +107,28 @@ margin-top: 20%;
         .containerCardGames{
             display: flex;
         }
+        .containerDates{
+            width: auto;
+        }
+        .dateTitle{
+            width: 177px;
+        }
+        
+        .dates{
+            width: auto;
+        }
 
 
 }
+
+@media(min-width: 1170px){
+    .cardGames{
+        width: 17vw;
+    }
+    .cardGames:not(:first-of-type){
+        margin-left: 4vw;
+        margin-top: 0;
+    }
+}
+
+

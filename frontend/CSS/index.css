@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 :root{
-    --microsoft-color:#66C0F4;
+    --pc-color:#66C0F4;
     --sony-color: #182580;
-    --pc-color: #107C10;
+    --microsoft-color: #107C10;
     --nintendo-color:#E60012;
     --backgroung-color: #1E1E1E;
 }
@@ -24,4 +25,7 @@ body{
 }
 #nintendo{
     background-color: var(--nintendo-color);
+}
+.microsoft{
+    background-color: var(--microsoft-color);
 }
