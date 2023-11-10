@@ -1,0 +1,54 @@
+#title{
+    text-align: center;
+    margin-top: 3vw;
+}
+.containerInput{
+    display: flex;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.containerInput:not(:first-of-type){
+    margin-top: 2vw;
+}
+
+.input{
+    border-radius: 10px;
+    width: 60vw;
+}
+#confirm{
+    font-size: larger;
+    border-radius: 10px;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
+    margin-top: 10px;
+}
+
+.datas{
+    width:20vw;
+}
+
+
+@media(min-width: 928px){
+    .containerInput{
+        width: 60vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+    .input{
+        width: 55vw;
+    }
+    #confirm{
+        
+        width: 14vw;
+        margin-left: 43vw;
+        margin-right: 43vw;
+        margin-top: 10px;
+    }
+    
+    .datas{
+        width:5vw;
+    }
+}
