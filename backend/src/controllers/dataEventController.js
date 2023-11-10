@@ -13,6 +13,11 @@ const insertEvent = async (request,response) =>
     const getFormEvent = await dataEventModel.insertEvent(idCompany,request.body)
     return response.status(201).json(getFormEvent)
 }
+const deleteEvent = async (request,response) =>
+{
+    const deleteEvent = await dataEventModel.deleteEvent(request.params.id)
+    return response.status(204).json()
+}
 const updateEvent = async (request,response) =>
 {
     const id = request.params.id
@@ -23,5 +28,6 @@ module.exports =
 {
     getEventData,
     insertEvent,
+    deleteEvent,
     updateEvent
 }

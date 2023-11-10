@@ -1,3 +1,4 @@
+const { query } = require("./connection")
 const connection = require("./connection")
 
 const getEventFromCompany  = async(idComapany) =>
@@ -16,6 +17,12 @@ const insertEvent = async (idComapany,formEvent) =>
     const [event] = await connection.execute(query,[idComapany,lastEvent,nextEvent]) // date format to body - YYYY-MM-DD
     return {insertId:event.insertId}
 }
+ const deleteEvent = async (id) =>
+ {
+     console.log(id)
+      const query = 'DELETE FROM DATA_EVENTOS WHERE id = ?'
+     const event = await connection.execute(query,[id])
+ }
  const updateEvent = async (id,formEvent) =>
  {
      const {lastEvent,nextEvent} = formEvent
@@ -28,5 +35,6 @@ module.exports =
 {
     getEventFromCompany,
     insertEvent,
+    deleteEvent,
     updateEvent
 }
