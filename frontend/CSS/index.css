@@ -13,19 +13,16 @@ body{
     color: rgb(255, 255, 255);
 }
 
-#microsoft{
+.microsoft{
     background-color: var(--microsoft-color);
 }
-#sony{
+.sony{
     background-color: var(--sony-color);
 }
-#pc{
+.pc{
     background-color: var(--pc-color);
 
 }
-#nintendo{
+.nintendo{
     background-color: var(--nintendo-color);
-}
-.microsoft{
-    background-color: var(--microsoft-color);
 }

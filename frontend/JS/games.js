@@ -39,7 +39,7 @@ window.onload = async () => {
     let lastEventOfficial= lastEventDate[2]+"/"+lastEventDate[1]+"/"+lastEventDate[0]//variavel que recebe a data reajustada como dia mes e ano
     let nextEventOfficial= nextEventDate[2]+"/"+nextEventDate[1]+"/"+nextEventDate[0]
       let html= "";//criação da variavel que vai receber o html
-      html+=`<div id="${company}">`//div que recebe o nome da empresa para alterar a cor de fundo
+      html+=`<div class="${company}">`//div que recebe o nome da empresa para alterar a cor de fundo
       switch(company){//switch para alterar a logo dependendo da empresa selecionada
         case "microsoft":
           html+=`<img src="../imgs/logoXbox.svg" id="logo" alt="Logo">`
@@ -85,26 +85,38 @@ window.onload = async () => {
         <h1 class="date">${date}</h1>
         <p class="description">${descriptionGame}</p>`
         if(plataformMicrosoft==true || plataformNintendo==true || plataformPc==true || plataformSony==true){
-          html+=`<p>Disponivel em: </p>
+          html+=`<p class="description">Disponivel em: </p>
           <div class="containerNE">`
+          
         if(plataformPc==true){
-          html+=`<div id="pc" class="icon">
+          html+=`<div class="icon pc">
+          <a href="./games.html?company=pc">
           <img src="../imgs/logoWindows.svg" alt="Logo">
+          </a>
           </div>`
         }
+        
         if(plataformSony==true){
-          html+=`<div id="sony" class="icon">
+          html+=`<div class="icon sony">
+          <a href="./games.html?company=sony">
           <img src="../imgs/logoSony.svg" alt="Logo">
+          </a>
           </div>`
         }
+
         if(plataformMicrosoft==true){
-          html+=`<div id="microsoft" class="icon">
+          html+=`<div class="icon microsoft">
+          <a href="./games.html?company=microsoft">
           <img src="../imgs/logoXbox.svg" alt="Logo">
+          </a>
           </div>`
         }
+        
         if(plataformNintendo==true){
-          html+=`<div id="nintendo" class="icon">
+          html+=`<div class="icon nintendo">
+          <a href="./games.html?company=nintendo">
           <img src="../imgs/logoNintendo.svg" alt="Logo">
+          </a>
           </div>`
         }
           html+=`</div>`;//fechamaneto do cointaner de jogos não exclusivos
