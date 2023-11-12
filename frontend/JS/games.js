@@ -39,7 +39,14 @@ window.onload = async () => {
     let lastEventOfficial= lastEventDate[2]+"/"+lastEventDate[1]+"/"+lastEventDate[0]//variavel que recebe a data reajustada como dia mes e ano
     let nextEventOfficial= nextEventDate[2]+"/"+nextEventDate[1]+"/"+nextEventDate[0]
       let html= "";//criação da variavel que vai receber o html
-      html+=`<div class="${company}">`//div que recebe o nome da empresa para alterar a cor de fundo
+      html+=`
+       <header class="mainHeader">
+      <nav class="menu">
+          <a class="menuLink" href="./index.html">Home</a>
+          <a class="menuLink" href="./frontend/views/login.html">Login</a>
+      </nav>
+  </header>
+      <div class="${company}">`//div que recebe o nome da empresa para alterar a cor de fundo
       switch(company){//switch para alterar a logo dependendo da empresa selecionada
         case "microsoft":
           html+=`<img src="../imgs/logoXbox.svg" id="logo" alt="Logo">`

@@ -26,3 +26,17 @@ body{
 .nintendo{
     background-color: var(--nintendo-color);
 }
+.mainHeader {
+    padding: 2% 0% 0% 5%;
+    z-index: 1;
+}
+.menu {
+    display: flex;
+    gap: 5%;
+    width: 10%;
+}
+.menuLink
+{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
