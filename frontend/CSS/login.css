@@ -29,6 +29,11 @@
 .datas{
     width:20vw;
 }
+#response
+{
+    color: rgb(180, 3, 3);
+    text-align: center;
+}
 
 
 @media(min-width: 928px){

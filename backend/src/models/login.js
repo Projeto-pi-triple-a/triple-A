@@ -15,7 +15,7 @@ const connection = require("./connection")
     }
     else
     {
-        return { error: 'email ou senha incorretos' }
+        return { error: 'email ou senha incorretos por favor digite novamente' }
     }
  }
 
