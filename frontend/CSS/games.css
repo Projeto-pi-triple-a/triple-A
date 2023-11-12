@@ -44,11 +44,14 @@ margin-bottom: 20px;
 
 .cardGames{
     width: 100%-12px;
-    border: 7px;
+    border: 9px;
     border-bottom-width: 5px;
     border-right-width: 5px;
+    border-radius: 10px;
     border-style: solid;
-    border-color: white;
+    border-color: rgb(228, 226, 226);
+    justify-content: center;
+    text-align: center;
 }
 
 .cardGames:not(:first-of-type){
@@ -56,7 +59,7 @@ margin-bottom: 20px;
 }
 
 .gameplay{
-    width: 100%;
+    width: 97%;
 }
 
 .nameGame, .price{
@@ -72,12 +75,13 @@ margin-bottom: 20px;
 .containerNE{
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
     margin-bottom: 10px;
+    gap: 2.5%;
+    margin-left: 17%;
 }
 .icon{
-    width: 20%;
-    height: 20%;
+    width: 10%;
+    height: 3vh;
     border-radius: 100%;
     display: flex;
     aspect-ratio: 1 / 1; 

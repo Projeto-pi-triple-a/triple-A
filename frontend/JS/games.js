@@ -67,7 +67,7 @@ window.onload = async () => {
       <h2 class="dateTitle">Próximo evento:</h2>
       <h2 class="dates">${nextEventOfficial}</h2>
       </div>
-      <h1 id="exclusiveGamesTitle">Jogos exclusivos</h1>`;
+      <h1 id="exclusiveGamesTitle"> Triple-A games</h1>`;
       let containersCards= games.length/4;//Cálculo para ver quantos containers vou precisar(são feitos em grupos de até 4)
       let cardGamesCount=0;//variavel para ir contando quantos cards foram concluidos(ja que tem que ir de 4 em 4)
       for (let i = 0; i < containersCards; i++) {//for para construir os containers dos cards
@@ -81,11 +81,11 @@ window.onload = async () => {
           <div class="cardGames">
         <h3 class="nameGame">${gameName}</h3>
         <iframe class="gameplay" src="https://www.youtube.com/embed/${linkVideo}" frameborder="0"></iframe>
-        <h3 class="price">R$${oficialPrice}</h3>
-        <h1 class="date">${date}</h1>
+        <h3 class="price"> Preço oficial: R$${oficialPrice}</h3>
+        <h3 class="date">Data de lançamento ${date}</h3>
         <p class="description">${descriptionGame}</p>`
         if(plataformMicrosoft==true || plataformNintendo==true || plataformPc==true || plataformSony==true){
-          html+=`<p class="description">Disponivel em: </p>
+          html+=`<p class="description">Disponivel nas plataformas: </p>
           <div class="containerNE">`
           
         if(plataformPc==true){

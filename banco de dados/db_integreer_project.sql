@@ -58,9 +58,9 @@ lastEvent date,
 nextEvent date
 );
 
-insert into microsoft values(null,"1 teste de jogo para a requisição 1","descrição para jogo da requisição","JVrZVdEnxHE",199.99,'2023-05-15'),
-                            (null,"2 teste de jogo para a requisição 2","descrição para jogo da requisição","JVrZVdEnxHE",199.99,'2023-05-15'),
-                            (null,"3 teste de jogo para a requisição 3","descrição para jogo da requisição","JVrZVdEnxHE",199.99,'2023-05-15');
+insert into microsoft values(null,"1 teste de jogo para a requisição 1","Tenha uma nova experiência das aventuras clássicas de Sonic The Hedgehog, Sonic The Hedgehog 2, Sonic 3 & Knuckles e Sonic CD no Sonic Origins remasterizado! Da emblemática Zona Green Hill ao traiçoeiro Robô Death Egg, você vai percorrer uma infinidade de momentos memoráveis na sua missão para frustrar os planos do Dr. Robotnik em alta definição! Esta versão atualizada contém áreas inéditas, animações adicionais e um novo Modo Aniversário!","JVrZVdEnxHE",199.99,'2023-05-15'),
+                            (null,"2 teste de jogo para a requisição 2","Tenha uma nova experiência das aventuras clássicas de Sonic The Hedgehog, Sonic The Hedgehog 2, Sonic 3 & Knuckles e Sonic CD no Sonic Origins remasterizado! Da emblemática Zona Green Hill ao traiçoeiro Robô Death Egg, você vai percorrer uma infinidade de momentos memoráveis na sua missão para frustrar os planos do Dr. Robotnik em alta definição! Esta versão atualizada contém áreas inéditas, animações adicionais e um novo Modo Aniversário!","JVrZVdEnxHE",199.99,'2023-05-15'),
+                            (null,"3 teste de jogo para a requisição 3","Tenha uma nova experiência das aventuras clássicas de Sonic The Hedgehog, Sonic The Hedgehog 2, Sonic 3 & Knuckles e Sonic CD no Sonic Origins remasterizado! Da emblemática Zona Green Hill ao traiçoeiro Robô Death Egg, você vai percorrer uma infinidade de momentos memoráveis na sua missão para frustrar os planos do Dr. Robotnik em alta definição! Esta versão atualizada contém áreas inéditas, animações adicionais e um novo Modo Aniversário!","JVrZVdEnxHE",199.99,'2023-05-15');
 INSERT INTO game_not_exclusive VALUES
 (null,'Jogo 1', 'Descrição do Jogo 1', 'https://video1.com', 49.99, '2023-10-01', false, false, true, false),
 (null,'Jogo 2', 'Descrição do Jogo 2', 'https://video2.com', 39.99, '2023-09-15', false, false, false, false),
@@ -74,6 +74,7 @@ INSERT INTO game_not_exclusive VALUES
 (null,'Jogo 10', 'Descrição do Jogo 10', 'https://video10.com', 49.99, '2023-01-01', false, false, false, false),
 (null,'Jogo 11', 'Descrição do Jogo 11', 'https://video11.com', 49.99, '2023-01-01', false, false, false, false);
 
+insert into game_not_exclusive values (null,'Jogo 11', 'Tenha uma nova experiência das aventuras clássicas de Sonic The Hedgehog, Sonic The Hedgehog 2, Sonic 3 & Knuckles e Sonic CD no Sonic Origins remasterizado! Da emblemática Zona Green Hill ao traiçoeiro Robô Death Egg, você vai percorrer uma infinidade de momentos memoráveis na sua missão para frustrar os planos do Dr. Robotnik em alta definição! Esta versão atualizada contém áreas inéditas, animações adicionais e um novo Modo Aniversário!', 'https://video11.com', 49.99, '2023-01-01', true, true, true, true);
 -- Inserindo no mínimo 10 registros na tabela com idCompany variando de 1 a 5
 INSERT INTO data_eventos (idCompany, lastEvent, nextEvent) VALUES
     (1, '2023-11-04', '2023-11-10'),
