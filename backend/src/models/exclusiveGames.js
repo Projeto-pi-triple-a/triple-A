@@ -11,6 +11,12 @@ const getAllGamesFromCompany = async (companyName) => {
   
     return games;
   };
+  const getGamefromCompany = async (company,id) =>
+  {
+    const query = `SELECT * FROM ${company} WHERE ID = ${id}`
+    const [game] = await connection.execute(query)
+    return game
+  }
   
 const insertGame = async(game) =>
 {
@@ -48,6 +54,7 @@ const insertGame = async(game) =>
 }
 module.exports = {
     getAllGamesFromCompany,
+    getGamefromCompany,
     insertGame,
     deleteGame,
     updateGame

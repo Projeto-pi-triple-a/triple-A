@@ -7,6 +7,13 @@ const getAllGames  = async(request,response) =>
   return response.status(200).json(gamesFromCompany)
 } // end const getAllGames controller
 
+const getGame = async(request,response) =>
+{
+  const company = request.params.companyName
+  const id = request.params.id
+  Game = await gamesModel.getGamefromCompany(company,id)
+  return response.status(200).json(Game)
+}
 const insertGame = async(request,response)=>
 {
  const createGame = await gamesModel.insertGame(request.body)
@@ -26,6 +33,7 @@ const updateGame = async (request,response) =>
 module.exports = 
 {
     getAllGames,
+    getGame,
     insertGame,
     deleteGame,
     updateGame
