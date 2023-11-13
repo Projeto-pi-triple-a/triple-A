@@ -1,0 +1,86 @@
+body{
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+#title{
+    text-align: center;
+    margin: 40px 0px;
+}
+select{
+    width: 50vw;
+    font-size: 2rem;
+    margin-left: 15vw;
+    margin-right: 15vw;
+    margin-bottom: 2vh;
+}
+
+.containerDates{
+    display: flex;
+    width: 80vw;
+    height: 40px;
+    
+}
+
+.containerCardGames{
+    width: 100%;
+    display: block;
+}
+
+.cardGames{
+    width: 100%-12px;
+    border: 9px;
+    border-bottom-width: 5px;
+    border-right-width: 5px;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(228, 226, 226);
+    justify-content: center;
+    text-align: center;
+}
+
+.cardGames:not(:first-of-type){
+    margin-top: 5vh;
+}
+
+.gameplay{
+    width: 97%;
+}
+
+.nameGame, .price{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none; 
+}
+.date, .description{
+    width: 80%;
+    margin-right: 10%;
+    margin-left: 10%;
+
+}
+
+@media(min-width: 928px){
+        select{
+        width: 20vw;
+        font-size: 2rem;
+        margin-left: 30vw;
+        margin-right: 30vw;
+        }
+        .cardGames{
+            width: 17vw;
+            box-sizing: border-box;
+        }
+        .cardGames:not(:first-of-type){
+            margin-top: 0;
+        }
+        .containerCardGames{
+            display: inline-flex;
+            justify-content: space-around;
+        }
+        .containerCardGames:not(:first-of-type){
+            margin-top: 20px;
+        }
+
+
+}
+
+
