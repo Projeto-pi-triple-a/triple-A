@@ -1,19 +1,19 @@
 const btnConfirm = document.querySelector('#confirm')
 btnConfirm.addEventListener('click', function () {
-    login(event);
+    login(event)
 })
 
 async function login(event) {
-    event.preventDefault();
-    const inputLogin = document.querySelector('#login').value;
-    const inputPassword = document.querySelector('#password').value;
+    event.preventDefault()
+    const inputLogin = document.querySelector('#login').value
+    const inputPassword = document.querySelector('#password').value
     const login = { email: inputLogin,password: inputPassword}
     const response = await fetch('http://localhost:3000/login', {
       method: 'POST',
       body: JSON.stringify(login),
       headers: { 'Content-Type': 'application/json' }
-    });
-    const data = await response.json();
+    })
+    const data = await response.json()
     if(data.error)
     {
         const p = document.querySelector('#response')
