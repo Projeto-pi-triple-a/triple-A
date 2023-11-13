@@ -1,0 +1,68 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.container
+{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    width: 100%;
+}
+.form{
+    width: 50%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    justify-content: center;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    background-color: rgb(43, 42, 42);
+    border-radius: 5px;
+
+}
+.inputForm
+{
+    border-radius: 5px;
+    width: 50%;
+    height: 3.5vh;
+    display: flex;
+    justify-content: center;
+    margin-left: 22%;
+}
+.descriptionGame
+{
+    border-radius: 5px;
+    width: 50%;
+    justify-content: center;
+    margin-left: 22%;
+    margin-top: 2%;
+}
+.SelectCompany
+{
+    width: 50%;
+    height: 3.5vh;
+    margin-left: 22%;
+}
+.labelForm
+{
+    margin-top: 2%;
+    margin-left: 22%;
+}
+.btnForm
+{
+    border-radius: 15px;
+    width: 50%;
+    height: 3.5vh;
+    display: flex;
+    justify-content: center;
+    margin-left: 22%;
+    margin-top: 15px; 
+    font-weight: 600; 
+    font-size: 1.2rem;
+}
+h2
+{
+    text-align: center;
+}

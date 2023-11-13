@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/form.css">
+    <title>formulário games exclusivos</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form">
+            <h2> Formulário Jogo Exclusivo</h2>
+            <label for="gameName"class='labelForm'>NOME</label>
+            <input type="text" class="inputForm" id="gameName">
+            <textarea name="descriptionGame" id="descriptionGame" class="descriptionGame" cols="10" rows="10"
+          placeholder="Descrição do Projeto"></textarea>
+          <label for="linkVideo"class='labelForm'>VIDEO</label>
+            <input type="text" class="inputForm" id="linkVideo">
+            <label for="priceGame" class='labelForm'>PREÇO OFICIAL</label>
+            <input type="number" class="inputForm" id="priceGame">
+            <label for="dateGame"class='labelForm'>DATA</label>
+            <input type="date" class="inputForm" id="dateGame">
+            <label for="company"class='labelForm'>Plataforma</label>
+            <select name="company" id="company" class="SelectCompany">
+                <option value="1">Microsoft</option>
+                <option value="2">Sony</option>
+                <option value="3">Nintendo</option>
+                <option value="4">PC</option>
+            </select>
+            <input type="submit" value="Enviar" class="btnForm">
+            <input type="reset" value="Reset" class="btnForm">
+        </form>
+    </div>
+</body>
+</html>
