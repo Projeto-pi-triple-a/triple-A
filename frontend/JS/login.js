@@ -22,6 +22,9 @@ async function login(event) {
     }
     else
     {
+        sessionStorage.setItem('id',data[0].id)
+        sessionStorage.setItem('email',data[0].email)
+        sessionStorage.setItem('nome',data[0].nome)
         window.location.href=("../../index.html")
     }
     console.log(data);

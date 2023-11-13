@@ -1,0 +1,54 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+.container
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0% 0% 0% 19%;
+}
+.tittle
+{
+    text-align: center;
+    justify-content: center;
+    margin-top: 5%;
+}
+.containerDataUser
+{
+    margin-top: 10%;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.DataUser
+{
+    display: flex;
+    padding: 1%;
+    justify-content: center;
+}
+.forms
+{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    margin: 10%;
+}
+.link
+{
+
+}
+.BtnlinkForm
+{
+    width: 70%;
+    height: 10vh;
+    text-align: center;
+    justify-content: center;
+    gap: 2.5vh;
+    border-radius: 10px;
+    background-color:  rgb(228, 226, 226);
+    font-size: 1.2rem;
+    font-weight: 600;
+}
