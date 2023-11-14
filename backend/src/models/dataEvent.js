@@ -12,8 +12,10 @@ const getEventFromCompany  = async(idComapany) =>
 const insertEvent = async (idComapany,formEvent) =>
 {
     const {lastEvent,nextEvent} = formEvent
-    console.log(idComapany)
-    const query = 'INSERT INTO DATA_EVENTOS (null,?,?,?)'
+    console.log("model "+idComapany)
+    console.log("model "+lastEvent)
+    console.log("model "+nextEvent)
+    const query = 'INSERT INTO DATA_EVENTOS (idCompany, lastEvent, nextEvent) VALUES (?, ?, ?)';
     const [event] = await connection.execute(query,[idComapany,lastEvent,nextEvent]) // date format to body - YYYY-MM-DD
     return {insertId:event.insertId}
 }

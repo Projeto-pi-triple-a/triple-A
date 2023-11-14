@@ -1,12 +1,12 @@
 
 const btnSubmit = document.querySelector('#send')
 btnSubmit.addEventListener('click', function () {
-    SendGame(event);
+    SendGame(event)
 })
 
 async function SendGame (event)
 {
-    event.preventDefault();
+    event.preventDefault()
     const gameName = document.querySelector('#gameName').value
     const descriptionGame = document.querySelector('#descriptionGame').value
     const linkVideo = document.querySelector('#linkVideo').value
@@ -37,10 +37,10 @@ async function SendGame (event)
     {
         data.insertId
         alert(`game ID ${data.insertId} inserido com sucesso na plataforma ${company}`)
-        document.querySelector('#gameName').value = "";
-        document.querySelector('#descriptionGame').value = "";
-        document.querySelector('#linkVideo').value = "";
-        document.querySelector('#priceGame').value = "";
-        document.querySelector('#dateGame').value = "";
+        document.querySelector('#gameName').value = ""
+        document.querySelector('#descriptionGame').value = ""
+        document.querySelector('#linkVideo').value = ""
+        document.querySelector('#priceGame').value = ""
+        document.querySelector('#dateGame').value = ""
     }
 }

@@ -5,9 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/form.css">
     <title>fomulário Evento</title>
 </head>
 <body>
-    
+    <div class="container">
+        <form action="" class="form">
+            <h2> Formulário Data de Evento</h2>
+            <select id="selectedCompany" class="SelectCompany">
+                <option value="0">Selecione uma plataforma</option>
+                <option value="1">microsoft</option>
+                <option value="2">sony</option>
+                <option value="3">nintendo</option>
+                <option value="4">PC</option>
+            </select>
+            <label for="lastEvent"class='labelForm'>Ultimo evento</label>
+            <input type="date" class="inputForm" id="lastEvent" disabled>
+            <label for="nextEvent"class='labelForm'>Próximo evento</label>
+            <input type="date" class="inputForm" id="nextEvent">
+            <input type="submit" value="Enviar" class="btnForm" id="send">
+            <input type="reset" value="Reset" class="btnForm" id="reset">
+        </form>
+    </div>
+    <script src="../JS/dataEvent.js"></script>
 </body>
 </html>

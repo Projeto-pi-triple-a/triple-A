@@ -9,9 +9,10 @@
     justify-content: center;
     margin-top: 2%;
     width: 100%;
+    text-align: center;
 }
 .form{
-    width: 50%;
+    width: 35%;
     height: 95vh;
     display: flex;
     flex-direction: column;

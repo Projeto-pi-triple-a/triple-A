@@ -10,6 +10,7 @@ const getEventData = async (request,response) =>
 const insertEvent = async (request,response) =>
 {
     const idCompany = request.params.idCompany
+    console.log("controller "+idCompany)
     const getFormEvent = await dataEventModel.insertEvent(idCompany,request.body)
     return response.status(201).json(getFormEvent)
 }
