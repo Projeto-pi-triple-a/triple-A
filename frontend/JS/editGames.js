@@ -53,17 +53,22 @@ for (let i = 0; i < containersCards; i++) {//for para construir os containers do
       let dateParts=oficialDate.substring(0, 10).split("-")//variavel que vai pegar apenas a data e dividir em ano mes e dia
 let date= dateParts[2]+"/"+dateParts[1]+"/"+dateParts[0]//variavel que vai reajustar e adaptar o dia, mes e ano
       html+=`<div class="cardGames">`
-      if(plataformMicrosoft==true || plataformNintendo==true || plataformPc==true || plataformSony==true){//jogo não exlcusivo
-        html+=`<a href="./jogoNaoExclusivo?id='${idGameNE}'&company='${company}'" class="nameGame"><h1>${gameName}</h1></a>`
-      }//if
-      else{//jogo exclusivo
-        html+=`<a href="./formEditExclusiveGames.html?id='${id}'&company='${company}'" class="nameGame"><h1>${gameName}</h1></a>`
-      }//else
       html+=`
+      <h1>${gameName}</h1>
     <iframe class="gameplay" src="https://www.youtube.com/embed/${linkVideo}" frameborder="0"></iframe>
     <h3 class="price"> Preço oficial: R$${oficialPrice}</h3>
     <h3 class="date">Data de lançamento ${date}</h3>
-    <p class="description">${descriptionGame}</p>`
+    <p class="description">${descriptionGame}</p>
+    <div class="containerIcons">`
+    if(plataformMicrosoft==true || plataformNintendo==true || plataformPc==true || plataformSony==true){//jogo não exlcusivo
+    html+=`<a href="./jogoNaoExclusivo.html?id='${id}'&company='${company}'" class="nameGame"><button class="material-symbols-outlined icon">edit</button></a>
+    <button class="material-symbols-outlined icon" id="deleteGameNE">Delete</button>`
+    }//jogo não exclusivo
+    else{//jogo exclusivo
+      html+=`<a href="./formEditExclusiveGames.html?id='${id}'&company='${company}'" class="nameGame"><button class="material-symbols-outlined icon">edit</button></a>
+      <button class="material-symbols-outlined icon" id="deleteGameE">Delete</button>`
+    }//jogo exclusivo
+    html+=`</div>`//fechamento container icons
     
     html+=`</div>`;//fechamento do card
       

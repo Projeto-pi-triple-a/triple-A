@@ -2,6 +2,9 @@ body{
     padding-left: 10vw;
     padding-right: 10vw;
 }
+.buttonTest{
+    background-color: rgb(228, 226, 226);
+}
 #title{
     text-align: center;
     margin: 40px 0px;
@@ -59,6 +62,9 @@ select{
     margin-left: 10%;
 
 }
+.containerIcons{
+    margin-bottom: 10px;
+}
 
 @media(min-width: 928px){
         select{
@@ -70,13 +76,22 @@ select{
         .cardGames{
             width: 17vw;
             box-sizing: border-box;
+            position: relative;
         }
         .cardGames:not(:first-of-type){
             margin-top: 0;
         }
+        .cardGames>.description{
+            margin-bottom: 50px;
+        }
         .containerCardGames{
             display: inline-flex;
             justify-content: space-around;
+        }
+        .containerIcons{
+            width: 100%;
+            position: absolute;
+            bottom: 10px;
         }
 
 
