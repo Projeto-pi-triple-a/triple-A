@@ -25,6 +25,7 @@ select{
 .containerCardGames{
     width: 100%;
     display: block;
+    margin-top: 20px;
 }
 
 .cardGames{
@@ -76,9 +77,6 @@ select{
         .containerCardGames{
             display: inline-flex;
             justify-content: space-around;
-        }
-        .containerCardGames:not(:first-of-type){
-            margin-top: 20px;
         }
 
 

@@ -57,7 +57,7 @@ let date= dateParts[2]+"/"+dateParts[1]+"/"+dateParts[0]//variavel que vai reaju
         html+=`<a href="./jogoNaoExclusivo?id='${idGameNE}'&company='${company}'" class="nameGame"><h1>${gameName}</h1></a>`
       }//if
       else{//jogo exclusivo
-        html+=`<a href="./formExclusiveGames.html?id='${id}'&company='${company}'" class="nameGame"><h1>${gameName}</h1></a>`
+        html+=`<a href="./formEditExclusiveGames.html?id='${id}'&company='${company}'" class="nameGame"><h1>${gameName}</h1></a>`
       }//else
       html+=`
     <iframe class="gameplay" src="https://www.youtube.com/embed/${linkVideo}" frameborder="0"></iframe>
