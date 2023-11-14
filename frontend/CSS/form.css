@@ -20,6 +20,7 @@
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
     background-color: rgb(43, 42, 42);
     border-radius: 5px;
+    align-items: center;
 
 }
 .inputForm
@@ -29,35 +30,29 @@
     height: 3.5vh;
     display: flex;
     justify-content: center;
-    margin-left: 22%;
 }
 .descriptionGame
 {
     border-radius: 5px;
     width: 50%;
     justify-content: center;
-    margin-left: 22%;
     margin-top: 2%;
 }
 .SelectCompany
 {
     width: 50%;
     height: 3.5vh;
-    margin-left: 22%;
 }
 .labelForm
 {
     margin-top: 2%;
-    margin-left: 22%;
+    display: flex;
 }
 .btnForm
 {
     border-radius: 15px;
-    width: 50%;
     height: 3.5vh;
-    display: flex;
-    justify-content: center;
-    margin-left: 22%;
+    width: 50%;    
     margin-top: 15px; 
     font-weight: 600; 
     font-size: 1.2rem;
@@ -65,4 +60,22 @@
 h2
 {
     text-align: center;
+}
+.checkCompany
+{
+    display: flex;
+    gap: 0.95vh;
+    align-items: baseline;
+    justify-content: center;
+}
+.labelForm-center
+{
+    text-align: center;
+    margin: 2%;
+}
+.labelCheckBox
+{
+    text-align: center;
+    display: flex;
+    justify-content: center;
 }
