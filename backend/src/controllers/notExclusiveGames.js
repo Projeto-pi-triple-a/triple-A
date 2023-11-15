@@ -1,5 +1,12 @@
 const notExclusiveGamesModel = require('../models/notExclusiveGames')
 
+
+const getGame = async(request,response) =>
+{
+  const id = request.params.id
+  Game = await notExclusiveGamesModel.getGamefromId(id)
+  return response.status(200).json(Game)
+}
 const insertGame = async(request,response)=>
 {
  const createGame = await notExclusiveGamesModel.insertGame(request.body)
@@ -21,5 +28,6 @@ module.exports =
 {
     insertGame,
     deleteGame,
-    updateGame
+    updateGame,
+    getGame
 }

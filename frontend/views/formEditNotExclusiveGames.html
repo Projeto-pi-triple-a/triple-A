@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/form.css">
+    <title>Formulário games Não exclusivos</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="form">
+            <h2> Formulário Jogo Não Exclusivo</h2>
+            <label for="gameName"class='labelForm'>NOME</label>
+            <input type="text" class="inputForm" id="gameName" placeholder="Nome do game">
+            <textarea name="descriptionGame" id="descriptionGame" class="descriptionGame" cols="10" rows="10"
+          placeholder="Descrição do Projeto"></textarea>
+          <label for="linkVideo"class='labelForm'>VIDEO</label>
+            <input type="text" class="inputForm" id="linkVideo" placeholder="Trailer oficial">
+            <label for="priceGame" class='labelForm'>PREÇO OFICIAL</label>
+            <input type="number" class="inputForm" id="priceGame" placeholder="Preço oficial">
+            <label for="dateGame"class='labelForm'>DATA</label>
+            <input type="date" class="inputForm" id="dateGame">
+            <label for="company"class='labelForm-center'>Plataformas</label>
+            <div class="checkCompany" id="checkCompany">
+                <label for="microsoft">Microsoft</label>
+                <input type="checkbox" name="microsoft" id="microsoft">
+                <label for="sony">sony</label>
+                <input type="checkbox" name="sony" id="sony">
+                <label for="nintendo">nintendo</label>
+                <input type="checkbox" name="nintendo" id="nintendo">
+                <label for="pc">PC</label>
+                <input type="checkbox" name="PC" id="pc">
+            </div>
+            <input type="submit" value="Enviar" class="btnForm" id="send">
+            <input type="reset" value="Reset" class="btnForm" id="reset">
+        </form>
+    </div>  
+    <script src="../JS/editNotExclusiveGames.js"></script>  
+</body>
+</html>

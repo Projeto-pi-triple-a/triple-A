@@ -1,5 +1,13 @@
 const connection = require("./connection")
 
+const getGamefromId = async (id) =>
+  {
+    const query = `SELECT * FROM game_not_exclusive WHERE idGameNE = ${id}`
+    const [game] = await connection.execute(query)
+    return game
+  }
+
+
 const insertGame = async (game) => {   
     const { gameName, descriptionGame, linkVideo, oficialPrice, oficialDate, plataformMicrosoft, plataformSony, plataformNintendo, plataformPc } = game;
 
@@ -36,5 +44,6 @@ const insertGame = async (game) => {
 module.exports = {
     insertGame,
     deleteGame,
-    updateGame
+    updateGame,
+    getGamefromId
 }

@@ -60,7 +60,7 @@ let date= dateParts[2]+"/"+dateParts[1]+"/"+dateParts[0]//variavel que vai reaju
     <p class="description">${descriptionGame}</p>
     <div class="containerIcons">`
     if(plataformMicrosoft==true || plataformNintendo==true || plataformPc==true || plataformSony==true){//jogo não exlcusivo
-    html+=`<a href="./jogoNaoExclusivo.html?id='${idGameNE}'&company='${company}'" class="nameGame"><button class="material-symbols-outlined icon">edit</button></a>
+    html+=`<a href="./formEditNotExclusiveGames.html?id='${idGameNE}'" class="nameGame"><button class="material-symbols-outlined icon">edit</button></a>
     <button class="material-symbols-outlined icon deleteGameNE" value="${idGameNE}">Delete</button>`
     }//jogo não exclusivo
     else{//jogo exclusivo
