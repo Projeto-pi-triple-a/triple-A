@@ -14,7 +14,7 @@ const insertGame = async (game) => {
  const deleteGame = async(game)=>
  {
     const {id} = game
-    const query = `DELETE from game_not_exclusive WHERE id =${id};`
+    const query = `DELETE from game_not_exclusive WHERE idGameNE =${id};`
     const [deleteGame] = await connection.execute(query)
  }
  const updateGame = async(game)=>

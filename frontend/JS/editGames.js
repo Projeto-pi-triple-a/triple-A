@@ -18,7 +18,6 @@ function idToCompany(id) {
 }
 
 
-
 async function htmlBuilder(companyId) {
     let company=idToCompany(companyId);
     const response = await fetch('http://localhost:3000/games/'+company)
@@ -49,7 +48,7 @@ for (let i = 0; i < containersCards; i++) {//for para construir os containers do
     html+=`<div class="containerCardGames">`;
    let count=0;//contador que vai verificar quando chegar em 4 cards dentro do container e reseta por cada container
     do {
-      const {id, idGameNE,descriptionGame,gameName,linkVideo,oficialDate,oficialPrice,plataformMicrosoft,plataformSony,plataformNintendo,plataformPc} = games[cardGamesCount]
+      const {idGameNE, id,descriptionGame,gameName,linkVideo,oficialDate,oficialPrice,plataformMicrosoft,plataformSony,plataformNintendo,plataformPc} = games[cardGamesCount]
       let dateParts=oficialDate.substring(0, 10).split("-")//variavel que vai pegar apenas a data e dividir em ano mes e dia
 let date= dateParts[2]+"/"+dateParts[1]+"/"+dateParts[0]//variavel que vai reajustar e adaptar o dia, mes e ano
       html+=`<div class="cardGames">`
@@ -61,12 +60,12 @@ let date= dateParts[2]+"/"+dateParts[1]+"/"+dateParts[0]//variavel que vai reaju
     <p class="description">${descriptionGame}</p>
     <div class="containerIcons">`
     if(plataformMicrosoft==true || plataformNintendo==true || plataformPc==true || plataformSony==true){//jogo não exlcusivo
-    html+=`<a href="./jogoNaoExclusivo.html?id='${id}'&company='${company}'" class="nameGame"><button class="material-symbols-outlined icon">edit</button></a>
-    <button class="material-symbols-outlined icon" id="deleteGameNE">Delete</button>`
+    html+=`<a href="./jogoNaoExclusivo.html?id='${idGameNE}'&company='${company}'" class="nameGame"><button class="material-symbols-outlined icon">edit</button></a>
+    <button class="material-symbols-outlined icon deleteGameNE" value="${idGameNE}">Delete</button>`
     }//jogo não exclusivo
     else{//jogo exclusivo
       html+=`<a href="./formEditExclusiveGames.html?id='${id}'&company='${company}'" class="nameGame"><button class="material-symbols-outlined icon">edit</button></a>
-      <button class="material-symbols-outlined icon" id="deleteGameE">Delete</button>`
+      <button class="material-symbols-outlined icon deleteGameE" value="${id}">Delete</button>`
     }//jogo exclusivo
     html+=`</div>`//fechamento container icons
     
@@ -83,13 +82,71 @@ else{
     html+=`<h1>Nenhum jogo cadastrado nesta empresa</h1>`
 }
 
-
+    
     var body = document.querySelector("body");
       body.innerHTML = html;
+      //--------Ações que devem ser recriadas para para reconstrução da página.
       let select= document.getElementById("selectedCompany");//aqui eu crio/recrio o evento de change Para atualizar ele com o novo select que foi criado
 select.addEventListener("change", function() {
     htmlBuilder(select.value)
   });
+//----
+  let deleteExclusiveGame= document.getElementsByClassName("deleteGameE");//aqui para a ação de apagar jogos exclusivos
+  for (let i = 0; i < deleteExclusiveGame.length; i++) {
+deleteExclusiveGame[i].addEventListener("click",async function(buttonSelected) {
+    buttonSelected= buttonSelected.target;
+    var confirmDelete = confirm("Deseja realmente apagar este jogo?");
+    if(confirmDelete==true){
+        const game = 
+    {
+        company : company,
+        id : buttonSelected.value
+    }
+    console.log(game)
+        const responseDelete = await fetch('http://localhost:3000/games/',
+        {
+        method : 'DELETE',
+        body : JSON.stringify(game),
+        headers: { 'Content-Type': 'application/json' }
+    })
+    alert("Jogo apagado com sucesso")
+    htmlBuilder(select.value);
+
+    }
+    else{
+        alert("Jogo mantido no sistema.");
+    }
+  });
+}//fim do deletar jogo exclusivo
+//----
+let deleteNotExclusiveGame= document.getElementsByClassName("deleteGameNE");//aqui para a ação de apagar jogos NÃO exclusivos
+for (let i = 0; i < deleteNotExclusiveGame.length; i++) {
+deleteNotExclusiveGame[i].addEventListener("click",async function(buttonSelected) {
+  buttonSelected= buttonSelected.target;
+  var confirmDelete = confirm("Deseja realmente apagar este jogo?");
+  if(confirmDelete==true){
+      const game = 
+  {
+      id : buttonSelected.value
+  }
+  console.log(game)
+      const responseDelete = await fetch('http://localhost:3000/gamesNotExclusive',
+      {
+      method : 'DELETE',
+      body : JSON.stringify(game),
+      headers: { 'Content-Type': 'application/json' }
+  })
+  alert("Jogo apagado com sucesso")
+  htmlBuilder(select.value);
+
+  }
+  else{
+      alert("Jogo mantido no sistema.");
+  }
+});
+}//fim do deletar jogo NÃO exclusivo
+
+  //---------Fim das ações que devem ser recriadas
       return games
 }
 
