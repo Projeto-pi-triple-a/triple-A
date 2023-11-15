@@ -25,7 +25,7 @@ async function login(event) {
         sessionStorage.setItem('id',data[0].id)
         sessionStorage.setItem('email',data[0].email)
         sessionStorage.setItem('nome',data[0].nome)
-        window.location.href=("../../index.html")
+        window.location.href=("../views/restrictArea.html")
     }
     console.log(data);
   }
