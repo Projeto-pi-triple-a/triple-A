@@ -20,6 +20,7 @@ async function SendGame (event)
     const dateGame = document.querySelector('#dateGame').value
     const game = 
     {
+        id : companyId,
         gameName : gameName,
         descriptionGame : descriptionGame,
         linkVideo : linkVideo,
@@ -36,28 +37,8 @@ async function SendGame (event)
         method : 'PUT',
         body : JSON.stringify(game),
         headers: { 'Content-Type': 'application/json' }
-    })
-    const data = await response.json()
-    if(data.error)
-    {
-        console.log(data.error)
-    }
-    else
-    {
-        data.insertId;
-        alert(`Game ID ${data.insertId} inserido com sucesso`);
-        document.querySelector('#microsoft').checked = false;
-        document.querySelector('#sony').checked = false;
-        document.querySelector('#nintendo').checked = false;
-        document.querySelector('#pc').checked = false;
-        document.querySelector('#gameName').value = "";
-        document.querySelector('#descriptionGame').value = "";
-        document.querySelector('#linkVideo').value = "";
-        document.querySelector('#priceGame').value = "";
-        document.querySelector('#dateGame').value = "";
-        
-    
-    }
+    });
+    alert("Game alterado com sucesso.")
 }
 
 var varLink = location.search.substring(1);
@@ -77,18 +58,18 @@ window.onload = async () => {
     let inputVideo = document.querySelector('#linkVideo')
     let inputPrice = document.querySelector('#priceGame')
     let inputDate = document.querySelector('#dateGame')
-    let microsoft = document.querySelector('#microsoft')
-    let sony = document.querySelector('#sony')
-    let nintendo = document.querySelector('#nintendo')
-    let pc = document.querySelector('#pc')
+    let checkMicrosoft = document.querySelector('#microsoft')
+    let checkSony = document.querySelector('#sony')
+    let checkNintendo = document.querySelector('#nintendo')
+    let checkPc = document.querySelector('#pc')
     inputName.value=gameName;
     inputDescription.value=descriptionGame;
     inputVideo.value=linkVideo;
     inputPrice.value=oficialPrice;
     inputDate.value=oficialDate;
-    microsoft.checked=plataformMicrosoft;
-    sony.checked=plataformSony;
-    nintendo.checked=plataformNintendo;
-    pc.checked=plataformPc;
+    checkMicrosoft.checked=plataformMicrosoft;
+    checkSony.checked=plataformSony;
+    checkNintendo.checked=plataformNintendo;
+    checkPc.checked=plataformPc;
 
 }
