@@ -42,7 +42,7 @@ window.onload = async () => {
       html+=`
        <header class="mainHeader">
       <nav class="menu">
-          <a class="menuLink" href="./index.html">Home</a>
+          <a class="menuLink" href="../../index.html">Home</a>
           <a class="menuLink" href="./frontend/views/login.html">Login</a>
       </nav>
   </header>

@@ -27,7 +27,7 @@ async function htmlBuilder(companyId) {
     let html="";
     html+=`<header class="mainHeader">
     <nav class="menu">
-        <a class="menuLink" href="#">Home</a>
+        <a class="menuLink" href="restrictArea.html">Home</a>
         <a class="menuLink" href="login.html">Login</a>
     </nav>
 </header>`;
