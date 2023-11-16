@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../CSS/index.css">
+    <link rel="stylesheet" href="../CSS/form.css">
     <link rel="stylesheet" href="../CSS/login.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
 </head>
@@ -15,17 +16,17 @@
             <a class="menuLink" href="./login.html">Login</a>
         </nav>
     </header>
-    <h1 id="title">Login</h1>
-    <div class="containerInput">
-        <p class="datas">Login: </p>
-        <input id= 'login' class="input" type="text">
-    </div>
-    <div class="containerInput">
-        <p class="datas">Senha: </p>
-        <input id="password" class="input" type="password">
-    </div>
-    <p id="response"></p>
-    <button id="confirm">Confirmar</button>
+    <div class="container">
+        <form action="" class="formLogin">
+            <h2> Login</h2>
+            <label for="login"class='labelForm'>Email</label>
+            <input type="email" class="inputForm" id="login" placeholder="email@gmail.com">
+          <label for="password"class='labelForm'>Senha</label>
+            <input type="password" class="inputForm" id="password">
+            <p id="response"></p>
+            <input type="submit" value="Enviar" class="btnForm" id="send">
+            <input type="reset" value="Reset" class="btnForm" id="reset">
+        </form>
 </body>
 <script src="../JS/login.js"></script>
 </html>

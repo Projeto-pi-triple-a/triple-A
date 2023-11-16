@@ -1,4 +1,4 @@
-const btnConfirm = document.querySelector('#confirm')
+const btnConfirm = document.querySelector('#send')
 btnConfirm.addEventListener('click', function () {
     login(event)
 })
