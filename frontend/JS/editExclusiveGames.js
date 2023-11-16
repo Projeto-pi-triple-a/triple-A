@@ -29,16 +29,7 @@ async function SendGame (event)
         body : JSON.stringify(game),
         headers: { 'Content-Type': 'application/json' }
     })
-    const data = await response.json()
-    if(data.error)
-    {
-        console.log(data.error)
-    }
-    else
-    {
-        data.insertId
-        alert(`game ID ${data.insertId} inserido com sucesso na plataforma ${company}`)
-    }
+    alert("Game alterado com sucesso.")
 }
 
 
