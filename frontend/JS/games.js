@@ -43,7 +43,7 @@ window.onload = async () => {
        <header class="mainHeader">
       <nav class="menu">
           <a class="menuLink" href="../../index.html">Home</a>
-          <a class="menuLink" href="./frontend/views/login.html">Login</a>
+          <a class="menuLink" href="login.html">Login</a>
       </nav>
   </header>
       <div class="${company}">`//div que recebe o nome da empresa para alterar a cor de fundo
