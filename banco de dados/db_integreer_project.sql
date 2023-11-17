@@ -58,21 +58,13 @@ lastEvent date,
 nextEvent date
 );
 
-insert into microsoft values(null,"1 teste de jogo para a requisição 1","Tenha uma nova experiência das aventuras clássicas de Sonic The Hedgehog, Sonic The Hedgehog 2, Sonic 3 & Knuckles e Sonic CD no Sonic Origins remasterizado! Da emblemática Zona Green Hill ao traiçoeiro Robô Death Egg, você vai percorrer uma infinidade de momentos memoráveis na sua missão para frustrar os planos do Dr. Robotnik em alta definição! Esta versão atualizada contém áreas inéditas, animações adicionais e um novo Modo Aniversário!","JVrZVdEnxHE",199.99,'2023-05-15'),
-                            (null,"2 teste de jogo para a requisição 2","Tenha uma nova experiência das aventuras clássicas de Sonic The Hedgehog, Sonic The Hedgehog 2, Sonic 3 & Knuckles e Sonic CD no Sonic Origins remasterizado! Da emblemática Zona Green Hill ao traiçoeiro Robô Death Egg, você vai percorrer uma infinidade de momentos memoráveis na sua missão para frustrar os planos do Dr. Robotnik em alta definição! Esta versão atualizada contém áreas inéditas, animações adicionais e um novo Modo Aniversário!","JVrZVdEnxHE",199.99,'2023-05-15'),
-                            (null,"3 teste de jogo para a requisição 3","Tenha uma nova experiência das aventuras clássicas de Sonic The Hedgehog, Sonic The Hedgehog 2, Sonic 3 & Knuckles e Sonic CD no Sonic Origins remasterizado! Da emblemática Zona Green Hill ao traiçoeiro Robô Death Egg, você vai percorrer uma infinidade de momentos memoráveis na sua missão para frustrar os planos do Dr. Robotnik em alta definição! Esta versão atualizada contém áreas inéditas, animações adicionais e um novo Modo Aniversário!","JVrZVdEnxHE",199.99,'2023-05-15');
+insert into microsoft values(null,"Forza Horizon 5","Explore um mundo aberto vibrante nas terras mexicanas com corridas divertidas e sem limites enquanto pilota os melhores carros do mundo. Acelere para o Parque Hot Wheels e corra nas pistas mais radicais já criadas.","agl0xMBQo2U",250,'2021-11-09' ),
+(null,"Sea of Thieves","Explore um vasto mundo aberto cheio de ilhas intocadas e reinos subaquáticos. Embarque em missões para encontrar tesouros perdidos, estabelecer uma reputação com as Companhias de Comércio e combater inimigos, de Fantasmas e Rastejantes do Oceano a Megalodontes e o poderoso Kraken.","agl0xMBQo2U",149.95,'2020-06-03' );
+
+
 INSERT INTO game_not_exclusive VALUES
-(null,'Jogo 1', 'Descrição do Jogo 1', 'https://video1.com', 49.99, '2023-10-01', false, false, true, false),
-(null,'Jogo 2', 'Descrição do Jogo 2', 'https://video2.com', 39.99, '2023-09-15', false, false, false, false),
-(null,'Jogo 3', 'Descrição do Jogo 3', 'https://video3.com', 29.99, '2023-08-20', false, false, false, false),
-(null,'Jogo 4', 'Descrição do Jogo 4', 'https://video4.com', 59.99, '2023-07-05', false, false, false, false),
-(null,'Jogo 5', 'Descrição do Jogo 5', 'https://video5.com', 19.99, '2023-06-15', false, false, false, false),
-(null,'Jogo 6', 'Descrição do Jogo 6', 'https://video6.com', 44.99, '2023-05-10', false, false, false, false),
-(null,'Jogo 7', 'Descrição do Jogo 7', 'https://video7.com', 34.99, '2023-04-02', false, false, false, false),
-(null,'Jogo 8', 'Descrição do Jogo 8', 'https://video8.com', 54.99, '2023-03-25', false, false, false, false),
-(null,'Jogo 9', 'Descrição do Jogo 9', 'https://video9.com', 24.99, '2023-02-10', false, false, false, false),
-(null,'Jogo 10', 'Descrição do Jogo 10', 'https://video10.com', 49.99, '2023-01-01', false, false, false, false),
-(null,'Jogo 11', 'Descrição do Jogo 11', 'https://video11.com', 49.99, '2023-01-01', false, false, false, false);
+(null,'Jogo 1', 'Descrição do Jogo 1', 'https://video1.com', 49.99, '2023-10-01', true, true, true, true),
+(null,'Jogo 2', 'Descrição do Jogo 2', 'https://video2.com', 39.99, '2023-09-15', false, false, true, false);
 
 insert into game_not_exclusive values (null,'Jogo 11', 'Tenha uma nova experiência das aventuras clássicas de Sonic The Hedgehog, Sonic The Hedgehog 2, Sonic 3 & Knuckles e Sonic CD no Sonic Origins remasterizado! Da emblemática Zona Green Hill ao traiçoeiro Robô Death Egg, você vai percorrer uma infinidade de momentos memoráveis na sua missão para frustrar os planos do Dr. Robotnik em alta definição! Esta versão atualizada contém áreas inéditas, animações adicionais e um novo Modo Aniversário!', 'https://video11.com', 49.99, '2023-01-01', true, true, true, true);
 -- Inserindo no mínimo 10 registros na tabela com idCompany variando de 1 a 5
@@ -118,6 +110,11 @@ SELECT * FROM game_not_exclusive WHERE plataformMicrosoft = true;
 
 
 select * from microsoft;
+
+insert into microsoft values(null,"1 teste de jogo para a requisição 1","Tenha uma nova experiência das aventuras clássicas de Sonic The Hedgehog, Sonic The Hedgehog 2, Sonic 3 & Knuckles e Sonic CD no Sonic Origins remasterizado! Da emblemática Zona Green Hill ao traiçoeiro Robô Death Egg, você vai percorrer uma infinidade de momentos memoráveis na sua missão para frustrar os planos do Dr. Robotnik em alta definição! Esta versão atualizada contém áreas inéditas, animações adicionais e um novo Modo Aniversário!","JVrZVdEnxHE",199.99,'2023-05-15'),
+                            (null,"2 teste de jogo para a requisição 2","Tenha uma nova experiência das aventuras clássicas de Sonic The Hedgehog, Sonic The Hedgehog 2, Sonic 3 & Knuckles e Sonic CD no Sonic Origins remasterizado! Da emblemática Zona Green Hill ao traiçoeiro Robô Death Egg, você vai percorrer uma infinidade de momentos memoráveis na sua missão para frustrar os planos do Dr. Robotnik em alta definição! Esta versão atualizada contém áreas inéditas, animações adicionais e um novo Modo Aniversário!","JVrZVdEnxHE",199.99,'2023-05-15'),
+                            (null,"3 teste de jogo para a requisição 3","Tenha uma nova experiência das aventuras clássicas de Sonic The Hedgehog, Sonic The Hedgehog 2, Sonic 3 & Knuckles e Sonic CD no Sonic Origins remasterizado! Da emblemática Zona Green Hill ao traiçoeiro Robô Death Egg, você vai percorrer uma infinidade de momentos memoráveis na sua missão para frustrar os planos do Dr. Robotnik em alta definição! Esta versão atualizada contém áreas inéditas, animações adicionais e um novo Modo Aniversário!","JVrZVdEnxHE",199.99,'2023-05-15');
+
 
 
 
