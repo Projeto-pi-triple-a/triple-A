@@ -13,7 +13,7 @@ Projeto criado através da solicitação de Projeto integrador de banco de dados
 * SQL
 ## Documentação
 
-[Documentação](https://docs.google.com/document/d/e/2PACX-1vSNGh8e-1RhBWl9uBasu2AMpy_UBVpDWYICR-xQKvMFv2fSfLo-EKY87PZHMd_IxVii9pfbB3pmiKof/pub)
+[Documentação](https://docs.google.com/document/d/1rgCOjo2hjS8Eyb9UXO0pJQ0mbM_quxoYcy34j8AkBxc/edit?usp=sharing)
 
 ## Autores
 | [<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Dostoevskij_1872.jpg/800px-Dostoevskij_1872.jpg" width=115><br><sub>Lucas Pedroso</sub>](https://github.com/1lucaspedroso) |
